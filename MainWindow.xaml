@@ -1,0 +1,30 @@
+﻿<Window x:Class="CustomerManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomerManagement"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="Background" Value="#f8f4e6"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,-6,0,6">
+        <Label Content="顧客管理" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.07,-0.276" FontSize="24"/>
+        <Label Content="名前" HorizontalAlignment="Left" Margin="70,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.122,-4.499" FontSize="14"/>
+        <Label Content="年齢" HorizontalAlignment="Left" Margin="70,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.734,-2.472" FontSize="14"/>
+        <Label Content="性別" HorizontalAlignment="Left" Margin="70,234,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.261,3.195" FontSize="14"/>
+        <TextBox x:Name="name_txt"  HorizontalAlignment="Left" Margin="120,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" Height="24" FontSize="14"/>
+        <TextBox x:Name="age_txt" HorizontalAlignment="Left" Margin="120,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" Height="24" FontSize="14"/>
+        <TextBox x:Name="gender_txt" HorizontalAlignment="Left" Margin="120,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" Height="24" FontSize="14"/>
+        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="300,80,31,174"/>
+        <Button x:Name="InsertBtn" Content="登録" Background="#ffdc00" HorizontalAlignment="Left" Margin="120,360,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="InsertBtn_Click"/>
+        <Button x:Name="UpdateBtn" Content="編集" Background="#fbdac8" HorizontalAlignment="Left" Margin="270,360,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="UpdateBtn_Click"/>
+        <Button x:Name="DeleteBtn" Content="削除" Background="#eaeea2" HorizontalAlignment="Left" Margin="420,360,0,0" VerticalAlignment="Top" Height="30" Width="80" RenderTransformOrigin="-1.681,0.607" FontSize="16" Click="DeleteBtn_Click"/>
+        <Button x:Name="ClearDataBtn" Content="クリア" Background="#ffffff" HorizontalAlignment="Left" Margin="570,360,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="ClearDataBtn_Click"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="300,285,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="search_txt" HorizontalAlignment="Left" Margin="331,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" FontSize="14" Height="24"/>
+    </Grid>
+</Window>
