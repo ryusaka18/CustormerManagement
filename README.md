@@ -1,3 +1,4 @@
+<ins>#The View</ins>
 WPF(Windows Presentation Foundation)を使って、シンプルな顧客管理システムを作りました。
 
 実行ファイルはCustormerManagement/bin/Debug/net9.0-windows/CustomerManagement.exeです。  
